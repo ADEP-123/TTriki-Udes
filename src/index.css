@@ -138,6 +138,8 @@ body {
   padding: 12px 32px;
   background: var(--surface);
   border-radius: 8px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 .scoreboard__player {
   text-align: center;
