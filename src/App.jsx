@@ -14,6 +14,7 @@ function App() {
     handleClick,
     resetGame,
     resetScore,
+    currentPlayer,
   } = useGameLogic();
 
   return (
@@ -31,6 +32,7 @@ function App() {
         winLine={winLine}
         onSquareClick={handleClick}
         isGameOver={!!winner || isDraw}
+        currentPlayer={currentPlayer}
       />
     </div>
   );

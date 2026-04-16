@@ -75,6 +75,13 @@ body {
 .square__symbol--o {
   color: #4fc3f7;
 }
+.square--preview .square__symbol {
+  opacity: 0.3;
+}
+
+.square--preview {
+  background: #1e1e3a;
+}
 
 @keyframes pulse {
   from {

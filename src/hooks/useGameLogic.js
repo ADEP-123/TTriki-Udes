@@ -47,5 +47,6 @@ export function useGameLogic() {
     handleClick,
     resetGame,
     resetScore,
+    currentPlayer: isXTurn ? "X" : "O",
   };
 }
