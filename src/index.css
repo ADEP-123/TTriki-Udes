@@ -1,0 +1,29 @@
+/* Reset y variables */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0f0f1a;
+  --surface: #1a1a2e;
+  --primary: #e94560;
+  --secondary: #0f3460;
+  --text: #eaeaea;
+  --muted: #666;
+  --cell-size: 120px;
+  --gap: 8px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Courier New", monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
