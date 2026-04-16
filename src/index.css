@@ -80,3 +80,61 @@ body {
   border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
+
+.status-bar {
+  text-align: center;
+  margin-bottom: 16px;
+  min-height: 60px;
+}
+.status-bar__message {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.btn-reset {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+.btn-reset:hover {
+  opacity: 0.8;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 12px 32px;
+  background: var(--surface);
+  border-radius: 8px;
+}
+.scoreboard__player {
+  text-align: center;
+}
+.scoreboard__label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.scoreboard__score {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.scoreboard__player--x .scoreboard__score {
+  color: var(--primary);
+}
+.scoreboard__player--o .scoreboard__score {
+  color: #4fc3f7;
+}
+.scoreboard__vs {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
