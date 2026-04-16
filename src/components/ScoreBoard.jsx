@@ -1,4 +1,4 @@
-function ScoreBoard({ score }) {
+function ScoreBoard({ score, onResetScore }) {
   return (
     <div className="scoreboard">
       <div className="scoreboard__player scoreboard__player--x">
@@ -10,6 +10,13 @@ function ScoreBoard({ score }) {
         <span className="scoreboard__label">Jugador O</span>
         <span className="scoreboard__score">{score.O}</span>
       </div>
+      <button
+        className="btn-reset-score"
+        onClick={onResetScore}
+        title="Reiniciar marcador"
+      >
+        ↺
+      </button>
     </div>
   );
 }

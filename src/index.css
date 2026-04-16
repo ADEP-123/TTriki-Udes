@@ -161,3 +161,25 @@ body {
   font-size: 0.85rem;
   color: var(--muted);
 }
+
+.btn-reset-score {
+  background: transparent;
+  border: 1px solid var(--muted);
+  color: var(--muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  margin-left: auto;
+}
+
+.btn-reset-score:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: rotate(-180deg);
+}
