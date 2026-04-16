@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { calculateWinner, isBoardFull } from "../utils/gameHelpers";
 
 export function useGameLogic() {
@@ -24,6 +24,12 @@ export function useGameLogic() {
     setSquares(Array(9).fill(null));
     setIsXTurn(true);
   }
+
+  useEffect(() => {
+    if (winner) {
+      setScore(prev => ({ ...prev, [winner]: prev[winner] + 1 }));
+    }
+  }, [winner]);
 
   return {
     squares,
