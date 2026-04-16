@@ -1,14 +1,14 @@
 import Square from "./Square";
 
-function Board({ squares, winLine, onSquareClick }) {
+function Board({ squares, winLine, onSquareClick, isGameOver }) {
   return (
-    <div className="board">
+    <div className={`board ${isGameOver ? 'board--disabled' : ''}`}>
       {squares.map((value, i) => (
         <Square
           key={i}
           value={value}
           isWinning={winLine.includes(i)}
-          onClick={() => onSquareClick(i)}
+          onClick={() => !isGameOver && onSquareClick(i)}
         />
       ))}
     </div>

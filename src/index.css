@@ -95,6 +95,15 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
+.board--disabled .square {
+  cursor: not-allowed;
+}
+
+.board--disabled .square:hover {
+  transform: none;
+  background: var(--surface);
+}
+
 .status-bar {
   text-align: center;
   margin-bottom: 16px;

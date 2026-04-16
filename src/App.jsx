@@ -25,7 +25,12 @@ function App() {
         isXTurn={isXTurn}
         onReset={resetGame}
       />
-      <Board squares={squares} winLine={winLine} onSquareClick={handleClick} />
+      <Board
+        squares={squares}
+        winLine={winLine}
+        onSquareClick={handleClick}
+        isGameOver={!!winner || isDraw}
+      />
     </div>
   );
 }
