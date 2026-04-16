@@ -28,7 +28,7 @@
   --secondary: #0f3460;
   --text: #eaeaea;
   --muted: #666;
-  --cell-size: 120px;
+  --cell-size: clamp(80px, 28vw, 120px);
   --gap: 8px;
 }
 
@@ -182,4 +182,49 @@ body {
   border-color: var(--primary);
   color: var(--primary);
   transform: rotate(-180deg);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .app__title {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 20px;
+  }
+
+  .scoreboard {
+    padding: 10px 16px;
+    gap: 14px;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .scoreboard__score {
+    font-size: 1.5rem;
+  }
+
+  .status-bar__message {
+    font-size: 0.95rem;
+  }
+
+  .board {
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .square {
+    font-size: 2rem;
+  }
+
+  .btn-reset {
+    padding: 6px 18px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --cell-size: clamp(72px, 30vw, 90px);
+    --gap: 5px;
+  }
 }
