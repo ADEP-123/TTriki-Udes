@@ -13,12 +13,13 @@ function App() {
     score,
     handleClick,
     resetGame,
+    resetScore,
   } = useGameLogic();
 
   return (
     <div className="app">
       <h1 className="app__title">TRIKI</h1>
-      <ScoreBoard score={score} />
+      <ScoreBoard score={score} onResetScore={resetScore} />
       <StatusBar
         winner={winner}
         isDraw={isDraw}
