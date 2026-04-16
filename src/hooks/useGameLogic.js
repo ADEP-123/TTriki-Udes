@@ -25,6 +25,12 @@ export function useGameLogic() {
     setIsXTurn(true);
   }
 
+  function resetScore() {
+    setScore({ X: 0, O: 0 });
+    setSquares(Array(9).fill(null));
+    setIsXTurn(true);
+  }
+
   useEffect(() => {
     if (winner) {
       setScore(prev => ({ ...prev, [winner]: prev[winner] + 1 }));
@@ -40,5 +46,6 @@ export function useGameLogic() {
     score,
     handleClick,
     resetGame,
+    resetScore,
   };
 }
